@@ -1,7 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
@@ -15,10 +13,83 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QMenuBar" name="menubar"/>
   <widget class="QWidget" name="centralwidget"/>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="ui_menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="ui_statusbar"/>
+  <widget class="QToolBar" name="ui_toolBar">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>64</width>
+     <height>64</height>
+    </size>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionDevices"/>
+   <addaction name="surveillanceAction"/>
+   <addaction name="actionSettings"/>
+  </widget>
+  <action name="surveillanceAction">
+   <property name="icon">
+    <iconset resource="../resources/intelligenthome.qrc">
+     <normaloff>:/icons/icons/cctv.svg</normaloff>:/icons/icons/cctv.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Surveillance</string>
+   </property>
+  </action>
+  <action name="actionDevices">
+   <property name="icon">
+    <iconset resource="../resources/intelligenthome.qrc">
+     <normaloff>:/icons/icons/wan.svg</normaloff>:/icons/icons/wan.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Devices</string>
+   </property>
+   <property name="toolTip">
+    <string>List of available devices</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset resource="../resources/intelligenthome.qrc">
+     <normaloff>:/icons/icons/settings.svg</normaloff>:/icons/icons/settings.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Settings</string>
+   </property>
+   <property name="toolTip">
+    <string>Settings</string>
+   </property>
+  </action>
  </widget>
- <pixmapfunction/>
+ <resources>
+  <include location="../resources/intelligenthome.qrc"/>
+ </resources>
  <connections/>
 </ui>
