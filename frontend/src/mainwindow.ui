@@ -50,9 +50,9 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionDevices"/>
+   <addaction name="devicesAction"/>
    <addaction name="surveillanceAction"/>
-   <addaction name="actionSettings"/>
+   <addaction name="settingsAction"/>
   </widget>
   <action name="surveillanceAction">
    <property name="icon">
@@ -63,7 +63,7 @@
     <string>Surveillance</string>
    </property>
   </action>
-  <action name="actionDevices">
+  <action name="devicesAction">
    <property name="icon">
     <iconset resource="../resources/intelligenthome.qrc">
      <normaloff>:/icons/icons/wan.svg</normaloff>:/icons/icons/wan.svg</iconset>
@@ -75,7 +75,7 @@
     <string>List of available devices</string>
    </property>
   </action>
-  <action name="actionSettings">
+  <action name="settingsAction">
    <property name="icon">
     <iconset resource="../resources/intelligenthome.qrc">
      <normaloff>:/icons/icons/settings.svg</normaloff>:/icons/icons/settings.svg</iconset>
@@ -91,5 +91,59 @@
  <resources>
   <include location="../resources/intelligenthome.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>devicesAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotShowDevicesWidget()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>settingsAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotShowSettingsWidget()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>surveillanceAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotShowSurveillanceWidget()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slotShowDevicesWidget()</slot>
+  <slot>slotShowSettingsWidget()</slot>
+  <slot>slotShowSurveillanceWidget()</slot>
+ </slots>
 </ui>

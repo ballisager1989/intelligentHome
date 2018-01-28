@@ -3,6 +3,9 @@
 
 #include <QMainWindow>
 
+
+class DevicesWidget;
+
 namespace Ui {
 class MainWindow;
 }
@@ -15,8 +18,18 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+public slots:
+    void slotShowDevicesWidget();
+    void slotShowSurveillanceWidget();
+    void slotShowSettingsWidget();
+
 private:
+    void initMenuWidgets();
+
     Ui::MainWindow *ui;
+    DevicesWidget* m_devicesWidget;
+
+
 };
 
 #endif // MAINWINDOW_H

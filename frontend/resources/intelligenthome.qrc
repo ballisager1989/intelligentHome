@@ -6,5 +6,6 @@
         <file>icons/cctv.svg</file>
         <file>icons/apps.svg</file>
         <file>icons/settings.svg</file>
+        <file>icons/search-web.svg</file>
     </qresource>
 </RCC>

@@ -8,6 +8,7 @@ include(../configuration/qtconfig.cmake)
 include_directories(
     src/
     )
+
 file(GLOB sources src/* )
 file(GLOB main main/* )
 file(GLOB res resources/*.qrc )
