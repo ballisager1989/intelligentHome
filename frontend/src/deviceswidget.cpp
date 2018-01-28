@@ -6,6 +6,9 @@ DevicesWidget::DevicesWidget(QWidget *parent) :
     ui(new Ui::DevicesWidget)
 {
     ui->setupUi(this);
+
+
+    ui->ui_deviceList->ad
 }
 
 DevicesWidget::~DevicesWidget()

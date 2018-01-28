@@ -12,3 +12,13 @@ DiscoverDevicesWidget::~DiscoverDevicesWidget()
 {
     delete ui;
 }
+
+void DiscoverDevicesWidget::slotDiscoverDevices()
+{
+
+}
+
+void DiscoverDevicesWidget::slotRegisterDevice(QModelIndex index)
+{
+
+}

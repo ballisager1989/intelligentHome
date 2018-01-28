@@ -15,6 +15,9 @@ public:
     explicit DiscoverDevicesWidget(QWidget *parent = 0);
     ~DiscoverDevicesWidget();
 
+public slots:
+    void slotDiscoverDevices();
+    void slotRegisterDevice(QModelIndex index);
 private:
     Ui::DiscoverDevicesWidget *ui;
 };
