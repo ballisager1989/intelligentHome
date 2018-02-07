@@ -1,0 +1,11 @@
+#ifndef PACKETTYPES_H
+#define PACKETTYPES_H
+
+
+
+enum PacketType{
+    PACKET_UNKNOWN = 0,
+    PACKET_IDENTIFICATION,
+    PACKET_IDENTIFICATION_REQ,
+}
+#endif // PACKETTYPES_H
